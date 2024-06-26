@@ -64,7 +64,7 @@
     <section class="roomList">
         @foreach ($rooms as $room)
             <div class="roomList-container">
-                <a href="roomDetails/{{ $room->_id }}">
+                <a href="{{ route('roomDetails', $room->_id) }}">
                     <img src="{{asset('assets/images/room3.jpg')}}"/>
                 </a>
                 <div class="roomList-icons">

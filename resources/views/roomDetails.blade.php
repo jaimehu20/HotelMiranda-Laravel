@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -60,13 +60,13 @@
     </header>
     <section class="roomDetails">
         <p>Detailed Room</p>
-        <p>{{$roomDetails['room_type']}}</p>
-        <p>${{$roomDetails['room_rate']}}/Night</p>
+        <p>{{$room->room_type}}</p>
+        <p>${{$room->room_rate}}/Night</p>
         <img src="./src/images/luxuryDoubleBed.jpg"/>
     </section>
     <section class="availability">
         <h2>Book Now</h2>
-        <form action="./roomDetails.php?room={{ $roomDetails['_id'] }}" method="post">
+        <form method="post">
             <label for="first_name">First Name</label>
             <input type="text" name="first_name" id="first_name" placeholder="Your first name...">
             <label for="last_name">Last Name</label>

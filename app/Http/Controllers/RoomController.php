@@ -18,4 +18,11 @@ class RoomController extends Controller
         $rooms = Room::with('amenities', 'bookings')->get();
         return view('rooms', compact('rooms'));
     }
+
+    public function show($id)
+{
+    $room = Room::findOrFail($id);
+    return view('roomDetails', compact('room'));
+}
+
 }
