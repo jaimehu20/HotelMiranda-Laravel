@@ -20,9 +20,9 @@ class RoomController extends Controller
     }
 
     public function show($id)
-{
+    {
     $room = Room::findOrFail($id);
     return view('roomDetails', compact('room'));
-}
+    }
 
 }
